@@ -149,7 +149,7 @@ $(function() {
   setTimeout(function() { onScrollInit($('.waypoint')) }, 10);
   
   // CONTACT FORM
-  $('#contact-form').submit(function(e) {
+  /*$('#contact-form').submit(function(e) {
     e.preventDefault();
     $.post('https://formspree.io/nmemisevic1@gmail.com', {name: name, email: email, message: message})
       /*$.ajax({
@@ -161,7 +161,7 @@ $(function() {
           $('#success').addClass('expand');
           $('#contact-form').find("input[type=text], input[type=email], textarea").val("");
       });*/
-  });
+    /*});*/
 
   $('#close').click(function() {
     $('#success').removeClass('expand');
