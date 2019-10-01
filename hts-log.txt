@@ -1,0 +1,18 @@
+HTTrack3.49-2 launched on Tue, 18 Jun 2019 15:30:45 at http://findmatthew.com +*.png +*.gif +*.jpg +*.jpeg +*.css +*.js -ad.doubleclick.net/*
+(webhttrack -q -%i -w http://findmatthew.com -O "/home/nedim/websites/findmatthewssss" -n -%P -N0 -s2 -p7 -D -a -K0 -c4 -%k -A25000 -F "Mozilla/4.5 (compatible; HTTrack 3.0x; Windows 98)" -%F "<!-- Mirrored from %s%s by HTTrack Website Copier/3.x [XR&CO'2014], %s -->" +*.png +*.gif +*.jpg +*.jpeg +*.css +*.js -ad.doubleclick.net/* -%s -%u )
+
+Information, Warnings and Errors reported for this mirror:
+note:	the hts-log.txt file, and hts-cache folder, may contain sensitive information,
+	such as username/password authentication for websites mirrored in this project
+	do not share these files/folders if you want these information to remain private
+
+15:34:45	Error: 	"Not Found" (404) at link findmatthew.com/img/filler.jpg (from findmatthew.com/)
+15:35:13	Error: 	"Not Found" (404) at link findmatthew.com/img/thumb-7.jpg (from findmatthew.com/style/style.css)
+15:35:13	Error: 	"Not Found" (404) at link findmatthew.com/img/thumb-8.jpg (from findmatthew.com/style/style.css)
+15:35:13	Error: 	"Not Found" (404) at link findmatthew.com/img/thumb-9.jpg (from findmatthew.com/style/style.css)
+15:35:13	Error: 	"Not Found" (404) at link findmatthew.com/img/thumb-10.jpg (from findmatthew.com/style/style.css)
+15:35:13	Error: 	"Not Found" (404) at link findmatthew.com/img/thumb-11.jpg (from findmatthew.com/style/style.css)
+15:35:13	Error: 	"Not Found" (404) at link findmatthew.com/img/thumb-12.jpg (from findmatthew.com/style/style.css)
+
+HTTrack Website Copier/3.49-2 mirror complete in 4 minutes 28 seconds : 61 links scanned, 54 files written (7020472 bytes overall) [5056566 bytes received at 18867 bytes/sec], 2457691 bytes transferred using HTTP compression in 22 files, ratio 24%, 1.0 requests per connection
+(7 errors, 0 warnings, 0 messages)
