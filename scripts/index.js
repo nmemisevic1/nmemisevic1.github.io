@@ -12,7 +12,7 @@ var firebaseConfig = {
 firebase.initializeApp(firebaseConfig);
 
 // Reference ips collection
-var visits = firebase.database().ref('Visits');
+var visits = firebase.database.ref('Visits');
 
 
 $(function() {
