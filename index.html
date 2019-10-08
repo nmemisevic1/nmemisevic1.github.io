@@ -1,35 +1,35 @@
 <!DOCTYPE html>
 <html>
 
-<!-- Mirrored from findmatthew.com/ by HTTrack Website Copier/3.x [XR&CO'2014], Tue, 18 Jun 2019 13:30:47 GMT -->
-<!-- Added by HTTrack --><meta http-equiv="content-type" content="text/html;charset=utf-8" /><!-- /Added by HTTrack -->
+<meta http-equiv="content-type" content="text/html;charset=utf-8" />
 <head>
   <title>Nedim Memisevic</title>
   <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1, user-scalable=no">
 
-  <!-- HOSTED -->
-  <link href='../fonts.googleapis.com/css9188.css?family=Open+Sans:400,600,700,600italic,300italic,400italic,300,700italic,800italic,800' rel='stylesheet' type='text/css'>
+  <link href="https://fonts.googleapis.com/css?family=Open+Sans:300,400,400i,600,700&display=swap" rel="stylesheet">
   <link href="fonts/mdi/css/materialdesignicons.min.css" media="all" rel="stylesheet" />
 
-  <!-- LOCAL -->
   <link rel="stylesheet" href="style/style.css">
-  <link rel='shortcut icon' href='favicon.ico' type='image/x-icon'/ >
+  
+  <link rel="shortcut icon" type="image/x-icon" href="favicon.ico"/>
+  
+  <script src="scripts/cdnjs.cloudflare.com/ajax/libs/prefixfree/1.0.7/prefixfree.min.js"></script>
+  <script src="scripts/ajax.googleapis.com/ajax/libs/jquery/2.2.0/jquery.min.js"></script>
+  <script src="scripts/cdnjs.cloudflare.com/ajax/libs/mixitup/2.1.11/jquery.mixitup.min.js"></script>
+  <script src="scripts/cdnjs.cloudflare.com/ajax/libs/waypoints/4.0.0/jquery.waypoints.min.js"></script>
 
-  <!-- HOSTED -->
-  <!-- The core Firebase JS SDK is always required and must be listed first -->
-  <script src="https://www.gstatic.com/firebasejs/7.1.0/firebase-app.js"></script>
-  <script src="https://www.gstatic.com/firebasejs/3.1.0/firebase-auth.js"></script>
-<script src="https://www.gstatic.com/firebasejs/3.1.0/firebase-database.js"></script>
-  <script src="../cdnjs.cloudflare.com/ajax/libs/prefixfree/1.0.7/prefixfree.min.js"></script>
-  <script src="../ajax.googleapis.com/ajax/libs/jquery/2.2.0/jquery.min.js"></script>
-  <script src="../cdnjs.cloudflare.com/ajax/libs/mixitup/2.1.11/jquery.mixitup.min.js"></script>
-  <script src="../cdnjs.cloudflare.com/ajax/libs/waypoints/4.0.0/jquery.waypoints.min.js"></script>
   <link rel="stylesheet" href="https://cdn.rawgit.com/konpa/devicon/df6431e323547add1b4cf45992913f15286456d3/devicon.min.css">
   <link rel="stylesheet" href="">
   <link rel="stylesheet" href="">
   <!-- LOCAL -->
   <script src="scripts/pt.min.js"></script>
   <script src="scripts/index.js"></script>
+  <script src="https://www.gstatic.com/firebasejs/7.1.0/firebase-app.js"></script>
+  <script src="scripts/firebase.js"></script>
+  <script src="https://www.gstatic.com/firebasejs/7.1.0/firebase-auth.js"></script>
+  <script src="https://www.gstatic.com/firebasejs/7.1.0/firebase-database.js"></script>
+  <script src="scripts/firebaseadder.js"></script>
+  <script src="scripts/submitForm.js"></script>
   <script src="scripts/modal.js"></script>
 
 </head>
@@ -74,7 +74,7 @@
         I'm a software developer.
       </div>
 
-      <div class="button page-link" dest="about">View my work <i class="mdi mdi-arrow-right"></i></div>
+      <div class="button page-link" dest="portfolio">View my work <i class="mdi mdi-arrow-right"></i></div>
 
       <nav class="flex">
         <div class="link-wrap">
@@ -216,13 +216,13 @@
         <div class="flex flex-50-gt-sm waypoint" data-animation="slide-in-left">
           <img src="img/me.png" class="me">
           <!-- <div><img class="up-arrow" src="img/up-arrow.png"></div> -->
-          <div class="label bold">Who am I?</div>
+          <div class="label bold">A little about me</div>
           <div>
             I'm student at <a class="highlight" href="http://www.etf.unsa.ba/" target="_blank">Faculty of Electrical Engineering</a> (grad. 2020) in Sarajevo, BA.
             <br>
             I am spending my free time by learning as much as I can, in fields which I find interesting.
             <br>
-            <!--<span class="page-link highlight" dest="contact">Let's make something special.</span>-->
+            <span class="page-link highlight" dest="contact">Contact me.</span>
           </div>
         </div>
       </div>
@@ -240,73 +240,73 @@
     <div class="filter-wrap waypoint" data-animation="fade-in">
       <div class="flex row">
         <div class="filter" data-filter="all">ALL</div>
-        <!--<div class="filter" data-filter=".node">NODE.JS</div>-->
-        <!--<div class="filter" data-filter=".rails">RUBY/RAILS</div>-->
-        <!--<div class="filter" data-filter=".js">JAVASCRIPT</div>-->
+        <div class="filter" data-filter=".mobile">MOBILE</div>
+        <div class="filter" data-filter=".desktop">DESKTOP</div>
+        <div class="filter" data-filter=".ai">AI</div>
       </div>
       <div class="float-bar">
         <div class="flex row">
           <div class="filter" data-filter="all">ALL</div>
-          <!--<div class="filter" data-filter=".node">NODE.JS</div>-->
-          <!--<div class="filter" data-filter=".rails">RUBY/RAILS</div>-->
-          <!--<div class="filter" data-filter=".js">JAVASCRIPT</div>-->
+          <div class="filter" data-filter=".mobile">MOBILE</div>
+          <div class="filter" data-filter=".desktop">DESKTOP</div>
+          <div class="filter" data-filter=".ai">AI</div>
         </div>
       </div>
     </div>
 
     <div id="gallery" class="container flex row wrap waypoint">
-      <div class="mix js" data-my-order="1">
+      <div class="mix desktop ai" data-my-order="1">
         <div>
           <div class="card"></div>
           <div class="text">
             <div class="bold">Betting Whisperer</div>
             <span class="highlight">C#, Python</span>
           </div>
-          <div class="button" id="roambi">SEE MORE</div>
+          <div class="button" id="whisperer">SEE MORE</div>
         </div>
       </div>
 
-      <div class="mix rails" data-my-order="1">
+      <div class="mix desktop" data-my-order="1">
         <div>
           <div class="card"></div>
           <div class="text">
-            <div class="bold">Quizzy</div>
-            <span class="highlight">Java (Android)</span>
+            <div class="bold">ASML 2018</div>
+            <span class="highlight">C++ (Emb. Sys.)</span>
           </div>
-          <div class="button" id="walker">SEE MORE</div>
+          <div class="button" id="asml">SEE MORE</div>
         </div>
       </div>
 
-      <div class="mix node" data-my-order="1">
+      <div class="mix mobile" data-my-order="1">
         <div>
           <div class="card"></div>
           <div class="text">
             <div class="bold">JPEPBIH 2018</div>
             <span class="highlight">Xamarin</span>
           </div>
-          <div class="button" id="mystand">SEE MORE</div>
+          <div class="button" id="epbih">SEE MORE</div>
         </div>
       </div>
 
-      <div class="mix js" data-my-order="1">
-        <div>
-          <div class="card"></div>
-          <div class="text">
-            <div class="bold">ASML 2018</div>
-            <span class="highlight">C++ (ES)</span>
-          </div>
-          <div class="button" id="never">SEE MORE</div>
-        </div>
-      </div>
-
-      <div class="mix rails" data-my-order="1">
+      <div class="mix desktop" data-my-order="1">
         <div>
           <div class="card"></div>
           <div class="text">
             <div class="bold">Keno Lottery</div>
-            <span class="highlight">Pure C++</span>
+            <span class="highlight">Raw C++</span>
           </div>
-          <div class="button" id="powur">SEE MORE</div>
+          <div class="button" id="keno">SEE MORE</div>
+        </div>
+      </div>
+
+      <div class="mix mobile" data-my-order="1">
+        <div>
+          <div class="card"></div>
+          <div class="text">
+            <div class="bold">Quizzy</div>
+            <span class="highlight">Java (Android)</span>
+          </div>
+          <div class="button" id="quizzy">SEE MORE</div>
         </div>
       </div>
   </section>
@@ -388,10 +388,10 @@
       <div class="header waypoint" data-animation="slide-in-left">CONTACT</div>
       <div class="header-bar waypoint" data-animation="slide-in-right" data-delay=".25s"></div>
       <div class="highlight waypoint" data-animation="slide-in-right" data-delay=".5s">Have a question or want to work together?</div>
-      <form method="POST" name="contactform" action="contact-form-handler.php"> 
-        <input placeholder="Name" type="text" name="name" required>
-        <input placeholder="Enter email" type="email" name="email" required>
-        <textarea placeholder="Your Message" type="text" name="message"></textarea>
+      <form name="contactform"> 
+        <input placeholder="Name" type="text" name="name" id="name" required>
+        <input placeholder="Enter email" type="email" name="email" id="email" required>
+        <textarea placeholder="Your Message" type="text" name="message" id="message" required></textarea>
         <!--<p>
         <label for='name'>Your Name:</label> <br>
         <input type="text" name="name">
@@ -407,7 +407,7 @@
         <div id="success">
           <div>Your message was sent successfully. Thanks!<span id="close" class="mdi mdi-close"></span></div>
         </div>
-        <button class="button" type="submit" value="Submit"><br>
+        <input class="button" type="submit" value="Submit" onclick="submitForm()"><br>
       </form>
       <!--<form action="https://formspree.io/nmemisevic1@gmail.com" method="POST" class="waypoint" data-animation="pop-in" data-delay=".5s" id="contact-form">
         <input placeholder="Name" type="text" name="name" required>
@@ -453,35 +453,27 @@
 
 <div id="preload">
    <img src="img/me.png"/>
-   <img src="img/filler.html"/>
    <img src="img/thumb-1.jpg"/>
    <img src="img/thumb-2.jpg"/>
    <img src="img/thumb-3.jpg"/>
    <img src="img/thumb-4.jpg"/>
    <img src="img/thumb-5.jpg"/>
-   <img src="img/thumb-6.jpg"/>
-   <img src="img/blog-1.jpg"/>
-   <img src="img/blog-2.jpg"/>
-   <img src="img/blog-3.jpg"/>
-   <img src="img/blog-4.jpg"/>
-   <img src="img/slides/mystand-0.jpg"/>
-   <img src="img/slides/mystand-1.jpg"/>
-   <img src="img/slides/mystand-2.jpg"/>
-   <img src="img/slides/never-0.jpg"/>
-   <img src="img/slides/never-1.jpg"/>
-   <img src="img/slides/never-2.jpg"/>
-   <img src="img/slides/powur-0.jpg"/>
-   <img src="img/slides/powur-1.jpg"/>
-   <img src="img/slides/powur-2.jpg"/>
-   <img src="img/slides/roambi-0.jpg"/>
-   <img src="img/slides/roambi-1.jpg"/>
-   <img src="img/slides/roambi-2.jpg"/>
-   <img src="img/slides/themall-0.jpg"/>
-   <img src="img/slides/themall-1.jpg"/>
-   <img src="img/slides/themall-2.jpg"/>
-   <img src="img/slides/walker-0.jpg"/>
-   <img src="img/slides/walker-1.jpg"/>
-   <img src="img/slides/walker-2.jpg"/>
+   <!--<img src="img/thumb-6.jpg"/>-->
+   <img src="img/slides/whisperer-0.png"/>
+   <img src="img/slides/whisperer-1.png"/>
+   <img src="img/slides/whisperer-2.png"/>
+   <img src="img/slides/quizzy-0.png"/>
+   <img src="img/slides/quizzy-1.png"/>
+   <img src="img/slides/quizzy-2.png"/>
+   <img src="img/slides/asml-0.png"/>
+   <img src="img/slides/asml-1.png"/>
+   <img src="img/slides/asml-2.png"/>
+   <img src="img/slides/keno-0.png"/>
+   <img src="img/slides/keno-1.png"/>
+   <img src="img/slides/keno-2.png"/>
+   <img src="img/slides/epbih-0.png"/>
+   <img src="img/slides/epbih-1.png"/>
+   <img src="img/slides/epbih-2.png"/>
 </div>
 
 </body>

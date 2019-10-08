@@ -2,32 +2,32 @@ $(document).ready(function(){
 
   // MODAL
   var modalText = {
-    roambi: {
+    whisperer: {
       title: 'Betting whisperer',
-      tag: 'DATA ANALYSIS.',
-      detail: 'I scraped all data I needed from a website that provides scores and stats. Then I started making my own parameters and in some really short time I had a result. It was not so bad, but still had a lot of to do. Then I included machine learning, logistic regression, to really make parameters work, and BAM! Betting whisperer started working with high accuracy. In 20 games he predicted 18 correctly which gives him accuracy percentage of 90%, which is really good.',
-      link: 'http://www.roambi.com'
+      tag: 'DATA SCIENCE. C#, Python',
+      detail: 'I scraped all data I needed from a website that provides scores and stats. Then I started making my own parameters and in some really short time I had a result. It was not so bad, but still had a lot of to do. Then I included machine learning, logistic regression, to really make parameters work, and BAM! Betting whisperer started working with high accuracy. In 20 games he predicted 18 correctly which gives him accuracy percentage of 90%, which is really good. Used tools: C#, Python, ML, (I/O) Local files',
+      //link: 'http://www.roambi.com'
     },
-    walker: {
-      title: 'WalkerTracker',
-      tag: 'PERFORMANCE METRICS.',
-      detail: 'Walker Tracker offers goal management, fitness tracking, and team competitions to companies for internal use. A Ruby on Rails and Javascript companion site for the Walker Tracker App. Features visual metrics and gamified progression system.',
-    },
-    powur: {
-      title: 'Powur.com',
-      tag: 'MULTI-LEVEL MARKETING.',
-      detail: 'Powur is a multi-level marketing platform for lead generation, recruitment, and team building. Built with Ruby on Rails and Angular-UI. Makes use of Angular-material for front-end visuals. Features complex user tree heiarchy and commission system.',
-      link: 'http://www.powur.com/with/42'
-    },
-    mystand: {
-      title: 'MyStand',
-      tag: 'CROWD-FUNDED CHARITY.',
-      detail: 'MyStand is a crowd-funding, media sharing website, that has you donating actions instead of money out of your pocket. Single page App built with Node.js on Sails and Angular 2.0. Features social media sharing and large scale crowd-funding.',
-    },
-    never: {
+    asml: {
       title: 'ASML Hackathon 2018',
-      tag: 'ALS AWARENESS.',
+      tag: 'DATA SCIENCE.',
       detail: 'In September 2018, I did some challenge on codility.com. Week later I got email that says I am in top 50 of 1200 contestants and invited to attend Hackathon in Eindhoven, NL. With all costs covered, I went to Eindhoven and attended big Hackathon in ASML, 1st tech company in the world. I made some friends and had a pretty good time there.',
+    },
+    epbih: {
+      title: 'JPEPBIH 2018 Hackathon',
+      tag: 'MOBILE DEVELOPMENT, AI',
+      detail: 'In late 2018. I attended Hackathon in main Electrical Company in BA. The main problem was Enhancing customer relationships through the mobile app, AI and chatbots. Used tools: Xamarin',
+      //link: 'http://www.powur.com/with/42'
+    },
+    quizzy: {
+      title: 'Quizzy',
+      tag: 'MOBILE DEVELOPMENT',
+      detail: 'As a project for subject "Mobile apps development, I made this Quiz app in which you can make Quizzes along their categories and questions. App works both Online and Offline. Used tools: Java(Android),(I/O) Firebase,Local Database',
+    },
+    keno: {
+      title: 'KENO Lottery',
+      tag: 'DATA SCIENCE. DATA ANALYSIS',
+      detail: 'For a customer in Croatia in 2015, I made lottery program that makes statistics for billions of combinations in couple of seconds no matter how large dataset was. Used tools: Raw C++, (I/O) Local files',
     },
     themall: {
       title: 'The Mall',
@@ -118,7 +118,7 @@ $(document).ready(function(){
     });
     $.each($('#modal .slide'), function(index, value) {
       $(this).css({
-        background: "url('img/slides/" + id + '-' + index + ".jpg') center center/cover",
+        background: "url('img/slides/" + id + '-' + index + ".png') center center/cover",
         backgroundSize: 'cover'
       });
               
