@@ -1,0 +1,155 @@
+<!DOCTYPE HTML>
+<html>
+
+<head>
+    <link href="//db.onlinewebfonts.com/c/2af6b6caf54718c9c10ff6de8ec6ae13?family=FierroW01-Regular" rel="stylesheet"
+        type="text/css" />
+    <style>
+        @import url(//db.onlinewebfonts.com/c/2af6b6caf54718c9c10ff6de8ec6ae13?family=FierroW01-Regular);
+
+        body {
+            margin: 0px;
+            padding: 0px;
+        }
+        @font-face {
+            font-family: "FierroW01-Regular";
+            src: url("./fonts/2af6b6caf54718c9c10ff6de8ec6ae13.eot");
+            src: url("./fonts/2af6b6caf54718c9c10ff6de8ec6ae13.eot?#iefix") format("embedded-opentype"),
+                url("./fonts/2af6b6caf54718c9c10ff6de8ec6ae13.woff2") format("woff2"),
+                url("./fonts/2af6b6caf54718c9c10ff6de8ec6ae13.woff") format("woff"),
+                url("./fonts/2af6b6caf54718c9c10ff6de8ec6ae13.ttf") format("truetype"),
+                url("./fonts/2af6b6caf54718c9c10ff6de8ec6ae13.svg#FierroW01-Regular") format("svg");
+        }
+        canvas{
+            font-family: "FierroW01-Regular";
+        }
+    </style>
+</head>
+
+<body>
+    <h3>Domacin</h3>
+    <select id="domacin">
+        <option value="baton">Baton</option>
+        <option value="butmir">Butmir</option>
+        <option value="eltarik">El Tarik</option>
+        <option value="hrid">Hrid</option>
+        <option value="igman">Igman</option>
+        <option value="jug">Jug</option>
+        <option value="mladost">Mladost Župča</option>
+        <option value="omladinac">Omladinac</option>
+        <option value="saobracajac">Saobracajac</option>
+    </select><input id="rezultat1" type="number" placeholder="Broj golova domacin">
+    <br>
+    <select id="gost">
+        <option value="baton">Baton</option>
+        <option value="butmir">Butmir</option>
+        <option value="eltarik">El Tarik</option>
+        <option value="hrid">Hrid</option>
+        <option value="igman">Igman</option>
+        <option value="jug">Jug</option>
+        <option value="mladost">Mladost Župča</option>
+        <option value="omladinac">Omladinac</option>
+        <option value="saobracajac">Saobracajac</option>
+    </select><input id="rezultat2" type="number" placeholder="Broj golova gost">
+    <br>
+    <button id="pokreni">Generiši</button><button id="obrisi">Očisti</button>
+    <br>
+
+
+    <canvas id="myCanvas" width="1676" height="1195" style="background: url('./kraj.png')"></canvas>
+    <img id="canvasImg" alt="Right click to save me!">
+
+
+
+
+    <script>
+        var obrisiButton = document.getElementById("obrisi");
+        obrisiButton.onclick = function () {
+            location.reload();
+        }
+        var canvas = document.getElementById("myCanvas")
+        var ctx = canvas.getContext("2d");
+        ctx.font = "220px FierroW01-Regular";
+
+        var button = document.getElementById("pokreni");
+        button.onclick = function () {
+            var domacin = new Image();
+            domacin.src = "./350x350/" + document.getElementById("domacin").value + ".png";
+
+            var gost = new Image();
+            gost.src = "./350x350/" + document.getElementById("gost").value + ".png";
+            domacin.onload = function(){
+                ctx.drawImage(domacin, 70, 450);
+            }
+            gost.onload = function(){
+                ctx.drawImage(gost, 1250, 450);
+            }
+            
+            ctx.font = "220px FierroW01-Regular";
+            ctx.fillStyle = "#002156";
+
+            var tekst = document.getElementById("rezultat1").value + "-" + document.getElementById("rezultat2").value;
+            ctx.fillText(tekst, 700, 700);
+        }
+        var background = new Image();
+        background.src = "kraj.png";
+
+
+
+        canvas.width = 1676;
+        canvas.height = 1195;
+
+        var domacin = new Image();
+        domacin.src = "./350x350/baton.png";
+
+        var gost = new Image();
+        gost.src = "./350x350/jug.png";
+        /*domacin.onload = function () {
+                ctx.drawImage(domacin, 70, 450);
+            }*/
+        background.onload = function () {
+            ctx.drawImage(background, 0, 0);
+        }
+        /*domacin.onload = function () {
+            ctx.drawImage(domacin, 70, 450);
+        }
+
+        gost.onload = function () {
+            ctx.drawImage(gost, 1250, 450);
+        }*/
+
+        // Make sure the image is loaded first otherwise nothing will draw.
+        /*background.onload = function () {
+            ctx.drawImage(background, 0, 0);
+        }*/
+
+
+
+
+        // draw cloud
+        /*context.beginPath();
+        context.moveTo(170, 80);
+        context.bezierCurveTo(130, 100, 130, 150, 230, 150);
+        context.bezierCurveTo(250, 180, 320, 180, 340, 150);
+        context.bezierCurveTo(420, 150, 420, 120, 390, 100);
+        context.bezierCurveTo(430, 40, 370, 30, 340, 50);
+        context.bezierCurveTo(320, 5, 250, 20, 250, 50);
+        context.bezierCurveTo(200, 5, 150, 20, 170, 80);
+        context.closePath();
+        context.lineWidth = 5;
+        context.fillStyle = '#8ED6FF';
+        context.fill();
+        context.strokeStyle = '#0000ff';
+        context.stroke();*/
+
+        // save canvas image as data url (png format by default)
+        var dataURL = canvas.toDataURL();
+
+        // set canvasImg image src to dataURL
+        // so it can be saved as an image
+        document.getElementById('canvasImg').src = dataURL;
+
+    </script>
+</body>
+
+</html>
