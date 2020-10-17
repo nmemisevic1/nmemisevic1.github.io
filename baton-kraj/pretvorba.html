@@ -2,8 +2,7 @@
 <html>
 
 <head>
-    <link href="//db.onlinewebfonts.com/c/2af6b6caf54718c9c10ff6de8ec6ae13?family=FierroW01-Regular" rel="stylesheet"
-        type="text/css" />
+    
     <style>
         @import url(//db.onlinewebfonts.com/c/2af6b6caf54718c9c10ff6de8ec6ae13?family=FierroW01-Regular);
 
@@ -27,7 +26,7 @@
 </head>
 
 <body>
-    <h3>Domacin</h3>
+    <h4>Domacin</h4>
     <select id="domacin">
         <option value="baton">Baton</option>
         <option value="butmir">Butmir</option>
@@ -40,6 +39,7 @@
         <option value="saobracajac">Saobracajac</option>
     </select><input id="rezultat1" type="number" placeholder="Broj golova domacin">
     <br>
+    <h4>Gost</h4>
     <select id="gost">
         <option value="baton">Baton</option>
         <option value="butmir">Butmir</option>
@@ -54,6 +54,9 @@
     <br>
     <button id="pokreni">Generiši</button><button id="obrisi">Očisti</button>
     <br>
+    <button id="spasi">Spasi slikicu</button>
+    <a id="spasiL">Spasi sliku</a>
+    <br>
 
 
     <canvas id="myCanvas" width="1676" height="1195" style="background: url('./kraj.png')"></canvas>
@@ -63,6 +66,14 @@
 
 
     <script>
+        var spasiButton = document.getElementById("spasi");
+        spasiButton.onclick = function(){
+            var image = canvas.toDataURL("image/png").replace("image/png", "image/octet-stream");  // here is the most important part because if you dont replace you will get a DOM 18 exception.
+
+
+window.location.href=image; // it will save locally
+
+        }
         var obrisiButton = document.getElementById("obrisi");
         obrisiButton.onclick = function () {
             location.reload();
@@ -110,22 +121,16 @@
         background.onload = function () {
             ctx.drawImage(background, 0, 0);
         }
-        /*domacin.onload = function () {
-            ctx.drawImage(domacin, 70, 450);
-        }
+        var dataURL = canvas.toDataURL();
 
-        gost.onload = function () {
-            ctx.drawImage(gost, 1250, 450);
-        }*/
-
-        // Make sure the image is loaded first otherwise nothing will draw.
-        /*background.onload = function () {
-            ctx.drawImage(background, 0, 0);
-        }*/
+// set canvasImg image src to dataURL
+// so it can be saved as an image
+document.getElementById('canvasImg').src = dataURL;
 
 
-
-
+        var link = document.getElementById('spasi');
+        
+        //link.click();
         // draw cloud
         /*context.beginPath();
         context.moveTo(170, 80);
@@ -141,7 +146,11 @@
         context.fill();
         context.strokeStyle = '#0000ff';
         context.stroke();*/
+        ctx.font = "220px FierroW01-Regular";
+            ctx.fillStyle = "#002156";
 
+            var tekst = "";
+            ctx.fillText(tekst, 700, 700);
         // save canvas image as data url (png format by default)
         var dataURL = canvas.toDataURL();
 
