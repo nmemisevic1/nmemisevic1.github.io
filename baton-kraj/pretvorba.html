@@ -54,8 +54,8 @@
     <br>
     <button id="pokreni">Generiši</button><button id="obrisi">Očisti</button>
     <br>
-    <button id="spasi">Spasi slikicu</button>
-    <a id="spasiL">Spasi sliku</a>
+    <button id="spasiK">Spasi slikicu</button>
+    <a id="spasi" style="display: none;">Spasi sliku</a>
     <br>
 
 
@@ -66,13 +66,12 @@
 
 
     <script>
-        var spasiButton = document.getElementById("spasi");
+        var link = document.getElementById('spasi');
+        //var spasiButton = document.getElementById("spasi");
         spasiButton.onclick = function(){
-            var datum = new Date();
-        var tekstSpasi = "BATON"+ datum.getDay()+datum.getMonth()+datum.getFullYear()+datum.getHours()+datum.getMinutes();
-        link.setAttribute('download', tekstSpasi+'.png');
-        link.setAttribute('href', canvas.toDataURL("image/png").replace("image/png", "image/octet-stream"));
-
+        
+        var link = document.getElementById('link');
+        
         }
         var obrisiButton = document.getElementById("obrisi");
         obrisiButton.onclick = function () {
@@ -101,6 +100,13 @@
 
             var tekst = document.getElementById("rezultat1").value + "-" + document.getElementById("rezultat2").value;
             ctx.fillText(tekst, 700, 700);
+
+            var datum = new Date();
+            var tekstSpasi = "BATON"+ datum.getDay()+datum.getMonth()+datum.getFullYear()+datum.getHours()+datum.getMinutes();
+            link.setAttribute('download', tekstSpasi+'.png');
+            link.setAttribute('href', canvas.toDataURL("image/png").replace("image/png", "image/octet-stream"));
+
+            
         }
         var background = new Image();
         background.src = "kraj.png";
