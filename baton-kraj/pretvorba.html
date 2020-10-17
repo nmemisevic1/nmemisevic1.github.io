@@ -66,6 +66,7 @@
 
 
     <script>
+        var du = 0, gu= 0, ru = 1;
         var link = document.getElementById('spasi');
         
         var obrisiButton = document.getElementById("obrisi");
@@ -85,24 +86,36 @@
             gost.src = "./350x350/" + document.getElementById("gost").value + ".png";
             domacin.onload = function(){
                 ctx.drawImage(domacin, 70, 450);
+                du = 1;
             }
             gost.onload = function(){
                 ctx.drawImage(gost, 1250, 450);
+                gu = 1;
             }
             
             ctx.font = "220px FierroW01-Regular";
             ctx.fillStyle = "#002156";
 
             var tekst = document.getElementById("rezultat1").value + "-" + document.getElementById("rezultat2").value;
-            ctx.fillText(tekst, 700, 700);
+            {
+                ctx.fillText(tekst, 700, 700);
+                ru = 1;
+            }
 
-            var datum = new Date();
-            var tekstSpasi = "BATON"+ datum.getDay()+datum.getMonth()+datum.getFullYear()+datum.getHours()+datum.getMinutes();
-            link.setAttribute('download', tekstSpasi+'.png');
-            link.setAttribute('href', canvas.toDataURL("image/png").replace("image/png", "image/octet-stream"));
-
-            
+            setLink();
         }
+        function setLink () {
+            if(du == 1 && gu == 1 && ru == 1){
+                var datum = new Date();
+                var tekstSpasi = "BATON"+ datum.getDay()+datum.getMonth()+datum.getFullYear()+datum.getHours()+datum.getMinutes();
+                link.setAttribute('download', tekstSpasi+'.png');
+                link.setAttribute('href', canvas.toDataURL("image/png").replace("image/png", "image/octet-stream"));
+                link.style.display="block";
+            }
+            else {
+            setTimeout(setLink, 500); // try again in 300 milliseconds
+            }
+}
         var background = new Image();
         background.src = "kraj.png";
 
