@@ -29,10 +29,10 @@ $(document).ready(function(){
       tag: 'DATA SCIENCE. DATA ANALYSIS',
       detail: 'For a customer in Croatia in 2015, I made lottery program that makes statistics for billions of combinations in couple of seconds no matter how large dataset was. Used tools: Raw C++, (I/O) Local files',
     },
-    themall: {
-      title: 'The Mall',
-      tag: 'PEER GUIDED SHOPPING.',
-      detail: 'The Mall is a place to follow the latest fashion purchases of your friends and favorite celebrities. Built with Node.js and Handlebars. Features the ability to import thousands of top brands products into one shopping site.',
+    mivex: {
+      title: 'Mivex Web Shop',
+      tag: 'WEB, JS, NODE, MONGO',
+      detail: 'For a web shop with 80k likes on social networks my friend and I did awesome web app. Includes stock management, orders tracking, income/outcome and sales statistical data representation.'
     }
   };
 
