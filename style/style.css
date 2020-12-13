@@ -162,7 +162,7 @@ body {
   height: inherit;
   width: inherit;
   content: '';
-  transform: rotateZ(60deg); }
+  transform: rotateZ(45deg); }
 
 .hexagon:after {
   position: absolute;
@@ -172,7 +172,7 @@ body {
   height: inherit;
   width: inherit;
   content: '';
-  transform: rotateZ(-60deg); }
+  transform: rotateZ(-45deg); }
 
 .highlight {
   color: rgb(227, 197, 27); }
